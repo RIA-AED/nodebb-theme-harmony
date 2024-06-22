@@ -66,9 +66,17 @@
 							<span component="topic/post-count" class="fw-normal">{humanReadableNumber(./postcount, 0)}</span>
 						</span>
 
+						<!-- RIAPatch: Add post author's user name -->
+						<!-- Mobile -->
+						<span class="border badge bg-transparent text-muted fw-normal">{./user.userslug}</span>
+						<!-- RIAPatch End -->
 						<a href="{config.relative_path}/topic/{./slug}{{{ if (./teaser.timestampISO && !config.theme.mobileTopicTeasers) }}}/{./teaser.index}{{{ end }}}" class="border badge bg-transparent text-muted fw-normal timeago" title="{{{ if (./teaser.timestampISO && !config.theme.mobileTopicTeasers) }}}{./teaser.timestampISO}{{{ else }}}{./timestampISO}{{{ end }}}"></a>
 					</div>
 
+					<!-- RIAPatch: Add post author's user name -->
+					<!-- Wide -->
+					<span class="d-none d-lg-block badge bg-transparent text-muted fw-normal">{./user.userslug}</span>
+					<!-- RIAPatch End -->
 					<a href="{config.relative_path}/topic/{./slug}" class="d-none d-lg-block badge bg-transparent text-muted fw-normal timeago" title="{./timestampISO}"></a>
 				</span>
 				{{{ if showSelect }}}
