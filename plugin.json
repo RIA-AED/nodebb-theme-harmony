@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-harmony-ria",
+	"id": "nodebb-theme-harmony",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
